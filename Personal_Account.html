@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My website</title>
+    <link rel="stylesheet" type="text/css" href="/css/Styles.css" media="screen" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Personal_Account</h1>
+    </header>
+     
+  <!--Navigation bar-->
+  <div id="navbar"> 
+    <ul>
+        <li id="item"><a href="/index.html">Home</a></li>
+        <li id="item"><a href="https://www.petersen.org/">Gallery</a></li>
+        <li id="item"><a href="#">Club</a>
+       
+
+                  <ul id="deploy">
+                      
+                    <li><a href="../About.html">About</a></li>
+                    <li><a href="../Registration.html">Registration</a></li>
+                   
+                       
+                
+                  </ul>
+                </div> 
+         
+
+                <section class="form-register">
+       
+                    <h1>Please sign in</h1>
+
+                    <form  id="form" method="post">
+                      <div id="message"></div>
+                      <input class="control" type="text" name="username" id="username" placeholder="Username" required/><br><br>
+                      <input class="control" type="password" name="password" id="password" placeholder="Password" required/><br><br>
+                      <input class="button" type="submit" value="Sign in"/><br><br>
+                      <ul>
+                        <p><a href="Landing_page/Partners_Page.html">Partners_Page</a></p>
+                    </ul>
+            
+                    </form>
+                    
+                </section>
+      <!-- Footer -->
+  <footer class="footer">
+    <h3>My website  Copyright © 2021</h3>
+  </footer>
+    
+  </footer>
+
+</body>
+                <script>
+
+                  //event listenr
+                  var form = document.getElementById('form')
+                  
+                  var error=[]
+                  
+                  
+                  form.addEventListener('submit', function(e){
+                    e.preventDefault()
+                  
+                    var username= document.getElementById('username')
+                    var password= document.getElementById('password')
+                  
+                    if(username.value==""){
+                       error.push("Please enter the username")
+                    }
+                  
+                    if(password.value==""){
+                        error.push("Please enter the password")    
+                    }
+                    alert("Authenticated")
+                    
+                    alert("Welcome, please visit our Partners Page")
+                  
+                    var message= document.getElementById('message')
+                        message,innerText=error
+                  
+                  })
+                  
+                  
+                  </script>
+</html>
+
+   
